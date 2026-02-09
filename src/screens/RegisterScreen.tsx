@@ -52,6 +52,7 @@ const RegisterScreen: React.FC<RegisterScreenProps> = ({ navigation }) => {
 
                 <View style={styles.form}>
                     <Input
+                        testID="register-name"
                         label="Name"
                         placeholder="Enter your name"
                         value={name}
@@ -59,6 +60,7 @@ const RegisterScreen: React.FC<RegisterScreenProps> = ({ navigation }) => {
                         autoCapitalize="words"
                     />
                     <Input
+                        testID="register-email"
                         label="Email"
                         placeholder="Enter your email"
                         value={email}
@@ -67,6 +69,7 @@ const RegisterScreen: React.FC<RegisterScreenProps> = ({ navigation }) => {
                         autoCapitalize="none"
                     />
                     <Input
+                        testID="register-password"
                         label="Password"
                         placeholder="Enter your password"
                         value={password}
@@ -74,6 +77,7 @@ const RegisterScreen: React.FC<RegisterScreenProps> = ({ navigation }) => {
                         secureTextEntry
                     />
                     <Button
+                        testID="register-button"
                         title="Register"
                         onPress={handleRegister}
                         loading={loading}
@@ -82,7 +86,9 @@ const RegisterScreen: React.FC<RegisterScreenProps> = ({ navigation }) => {
 
                     <View style={styles.footer}>
                         <Text style={styles.footerText}>Already have an account? </Text>
-                        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                        <TouchableOpacity
+                            testID="link-to-login"
+                            onPress={() => navigation.navigate('Login')}>
                             <Text style={styles.link}>Login</Text>
                         </TouchableOpacity>
                     </View>

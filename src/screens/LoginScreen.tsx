@@ -50,6 +50,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
 
                 <View style={styles.form}>
                     <Input
+                        testID="login-email"
                         label="Email"
                         placeholder="Enter your email"
                         value={email}
@@ -58,6 +59,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
                         autoCapitalize="none"
                     />
                     <Input
+                        testID="login-password"
                         label="Password"
                         placeholder="Enter your password"
                         value={password}
@@ -65,6 +67,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
                         secureTextEntry
                     />
                     <Button
+                        testID="login-button"
                         title="Login"
                         onPress={handleLogin}
                         loading={loading}
@@ -73,7 +76,9 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
 
                     <View style={styles.footer}>
                         <Text style={styles.footerText}>Don't have an account? </Text>
-                        <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+                        <TouchableOpacity
+                            testID="link-to-register"
+                            onPress={() => navigation.navigate('Register')}>
                             <Text style={styles.link}>Register</Text>
                         </TouchableOpacity>
                     </View>

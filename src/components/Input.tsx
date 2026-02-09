@@ -25,6 +25,7 @@ export const Input: React.FC<InputProps> = ({
         <View style={[styles.container, containerStyle]}>
             {label && <Text style={styles.label}>{label}</Text>}
             <TextInput
+                testID={props.testID}
                 style={[styles.input, error ? styles.inputError : null]}
                 placeholderTextColor={COLORS.placeholder}
                 {...props}

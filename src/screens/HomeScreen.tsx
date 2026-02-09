@@ -54,6 +54,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ route, navigation }) => {
                     </View>
 
                     <Button
+                        testID="logout-button"
                         title="Logout"
                         onPress={handleLogout}
                         style={styles.logoutButton}
